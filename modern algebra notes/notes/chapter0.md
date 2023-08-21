@@ -64,7 +64,9 @@ Assume we have the non-empty set $S_n=\{-x\mid x\in \mathbb{Z}^+\}$ we can make 
     0 & 1
 \end{pmatrix}$
 
-Proof $A^n=\begin{pmatrix}
+**Proof** 
+
+$A^n=\begin{pmatrix}
     1&n\\
     0&1
 \end{pmatrix}$ where $A=\begin{pmatrix}1&1 \\0 &1 \end{pmatrix}$
@@ -88,4 +90,27 @@ If we multiply the terms we end up with.
 
 $A^{n+1}=\begin{pmatrix}1&n+1 \\0 &1 \end{pmatrix}\square$
 
-3.
+3. Show that any amount of postage that is an integer number of cents greater than 11 cents can be formed using just 4-cent stamps and 5-cent stamps.
+
+**Proof**
+
+ Base cases $12¢$ can be formed by three 4-cent stamps. $13¢$ can be formed by two 4-cent stamps and a single 5-cent stamp.
+
+ _Inductive hypothesis_
+ 
+ Assume that $\exists n\geq 12$ where $i$ cents can be formed where $12\leq i \leq n$.
+
+ We can form $n+1¢$ by forming $n-3$ and then adding another 5-cent stamp to 
+ form $n+1¢\square$ 
+
+4. Prove using mathematical induction that 
+$$1^3+2^3+...+n^3=(\frac{n(n+1)}{2})^2, \forall n\geq 1$$
+
+**Proof**
+
+Base case $n=1$
+$$1^3=1=(\frac{1\cdot2}{2})^2$$
+
+_Induction hypothesis_
+
+Assume that $\exists n\geq 1$ such that $1^3+...+n^3=(\frac{n(n+1)}{2})^2$
