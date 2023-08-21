@@ -80,3 +80,14 @@ A **vector space** is a set $V$ along with an addition on $V$ and a scalar multi
 * $a(u+v)=au+av, \forall a\in F,\forall u,v\in V$
 * $(a+b)v=av+bv, \forall a,b\in F,\forall v\in V$
 
+
+### Definition
+A **vector** is an element of a vector space.
+
+#### Notation
+* If $S$ is a set, then $F^S$ denotes the set of functions from $S$ to $F$
+* For $f,g \in F^S$, **sum** $f+g \in F^s$ is the function defined by
+$$(f+g)(x)=f(x)+g(x), \forall x\in S$$
+* For $\lambda \in F$ and  $f \in F^S$, the **product** $\lambda f \in F^S$ is the function defined by 
+$$(\lambda f)(x)=\lambda f(x), \forall x\in S$$
+
