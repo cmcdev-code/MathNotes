@@ -1,3 +1,11 @@
+
+
+- [What is a function?](#what-is-a-function)
+    - [Various Sets](#various-sets)
+    - [Axiom \[Well ordering principle\]](#axiom-well-ordering-principle)
+    - [Theorem \[Principle of Mathematical Induction\]](#theorem-principle-of-mathematical-induction)
+  - [Exercises](#exercises)
+
 # What is a function?
 
 A function $f:A\mapsto B$ is a relation between two sets in this case the set  $A$ and $B$ where each element of $A$ is related to exactly one element of $B$.
@@ -7,7 +15,7 @@ If we say that the function $f:A\mapsto B$ is _injective (one-to-one)_ then that
 
 If we say that a function $f: A\mapsto B$ is _surjective (onto)_ then that means $\forall b\in B, \;\exists a \in A\text{ such that } f(a)=b$.
 
-The _image (range)_ of $f$ is $\{b\in B\mid \exists a \in A ,f(a)=b \}$ informally we can think of this as all the values of $B$ that are related to something in $A$
+The _image (range)_ of $f$ is $f(A)$ in set notation $\{b\in B\mid \exists a \in A ,f(a)=b \}$ informally we can think of this as all the values of $B$ that are related to something in $A$
 
 The _coDomain_ of the function $f:A\mapsto B$ is the set $B$ if the coDomain is equal to the image then we can say that it is surjective (onto).
 
@@ -23,3 +31,61 @@ The _preimage_ of the function $f: A\mapsto B$ with $C\subseteq B$ is the set $\
 * The _real numbers_ $\mathbb{R}=\{\text{set of real numbers}\}$
 * The _complex numbers_ $\mathbb{C}=\{a+bi\mid a,b \in \mathbb{R}\}$
 
+The sets $\mathbb{N},\mathbb{Z},\mathbb{Q}$ have a natural order defined by $a < b \iff b-a >0$.
+
+### Axiom [Well ordering principle] 
+
+Let $S \subset \mathbb{Z}$ be nonempty subset of the integers which is bounded below. Then $S$ contains a smallest element denoted by $\min(S)$.
+
+### Theorem [Principle of Mathematical Induction]
+
+Let $P(n)$ be a mathematical statement depending on an integer $n$ where $n\geq n_0$. Assume that:
+* $P(n_0)$ is true
+* $\forall n\geq n_0$ if $P(n)$ is true, then $P(n+1)$ is true.
+
+Then $P(n)$ is true $\forall n\geq n_0$
+
+**Proof** _of principle of mathematical induction_
+
+Assume that $P(n_0)$ is true and $\forall n\geq n_0$ $P(n)$ is true and $P(n+1)$ is true but $\exists n_1\geq n_0$ where $P(n_1)$ is not true.
+Then we know that the set $S$ that contains integers $i$ where $P(i)$ is not true is nonempty. Because its bounded bellow by $n_0$ and also nonempty then we can say $\exists \min(S)$ we will say that $a=\min(S)$ we can say that  $P(a-1)$ is true and by the assumption that would imply that $P(a)$ is true this is a contradiction. $\square$
+
+
+## Exercises
+
+1. Use the Well Ordering Principle to show that every nonempty set of negative integers has a greatest element.
+
+**Proof**
+
+Assume we have the non-empty set $S_n=\{-x\mid x\in \mathbb{Z}^+\}$ we can make the set $S_p=\{-x\mid x\in S_n \}$ then $S_p$ has a least element by the well ordering principle $a=\min(S_p)$ we know that $-a\in S_n$ and we know that this is the $-a=\max(S_n)$ suppose that it was not the max. Then that would mean that $\exist b\geq -a$ but that would mean that $-b \in S_p$ and $-b\leq a$ however we said $a$ was the $\min(S_p)$ which is a contradiction. $\square$ 
+
+2. Conjecture a formula for $A^n$ where $A=\begin{pmatrix}
+    1 & 1 \\ 
+    0 & 1
+\end{pmatrix}$
+
+Proof $A^n=\begin{pmatrix}
+    1&n\\
+    0&1
+\end{pmatrix}$ where $A=\begin{pmatrix}1&1 \\0 &1 \end{pmatrix}$
+
+Base case is $A^1=\begin{pmatrix}1&1 \\0 &1 \end{pmatrix}$
+
+Inductive hypothesis assume that $\exist n\geq 1$ where  $A^n=\begin{pmatrix}
+    1&n\\
+    0&1
+\end{pmatrix}$
+
+Then  $A^n=\begin{pmatrix}
+    1&n\\
+    0&1
+\end{pmatrix} \implies A^n\cdot A=\begin{pmatrix}
+    1&n\\
+    0&1
+\end{pmatrix}\cdot\begin{pmatrix}1&1 \\0 &1 \end{pmatrix}$ 
+
+If we multiply the terms we end up with.
+
+$A^{n+1}=\begin{pmatrix}1&n+1 \\0 &1 \end{pmatrix}\square$
+
+3.
