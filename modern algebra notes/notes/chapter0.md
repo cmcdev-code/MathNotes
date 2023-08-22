@@ -5,6 +5,9 @@
     - [Axiom \[Well ordering principle\]](#axiom-well-ordering-principle)
     - [Theorem \[Principle of Mathematical Induction\]](#theorem-principle-of-mathematical-induction)
   - [Exercises](#exercises)
+- [Number Theory](#number-theory)
+    - [Definition \[Divides\]](#definition-divides)
+    - [Theorem \[Division Algorithm\]](#theorem-division-algorithm)
 
 # What is a function?
 
@@ -113,4 +116,26 @@ $$1^3=1=(\frac{1\cdot2}{2})^2$$
 
 _Induction hypothesis_
 
-Assume that $\exists n\geq 1$ such that $1^3+...+n^3=(\frac{n(n+1)}{2})^2$
+Assume that $\exists n\geq 1$ such that $\sum_{i\geq 1}^ni^3=(\frac{n(n+1)}{2})^2$
+
+
+$$\sum_{i \geq 1}^{n+1}i^3=(n+1)^3+(\frac{n(n+1)}{2})^2$$
+$$\frac{4*(n+1)^3+n^2(n+1)}{4}^2=\frac{(n+1)^2\cdot(4(n+1)+n^2)}{4}$$
+$$\frac{(n+1)^2\cdot(4n+4+n^2)}{4}=\frac{(n+1)^2\cdot(n+2)^2}{4}$$
+
+$$\frac{(n+1)^2\cdot(n+2)^2}{4}=\frac{(n+1)^2\cdot((n+1)+1)^2}{4}\square$$
+
+# Number Theory
+### Definition [Divides]
+Let $a,b\in \mathbb{Z}$. We say $a$ divides $b$ written as $a\mid b$ if $\exists j \in \mathbb{Z}$, s.t. $b=a\cdot j$
+
+### Theorem [Division Algorithm]
+
+Let $a,b \in \mathbb{Z}, b>0$. Then $\exist!q,r\in \mathbb{Z}$ s.t. $a=bq+r \land 0\leq r \leq b-1$
+
+**Proof**
+
+
+_____________
+
+
